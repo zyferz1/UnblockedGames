@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Search, Gamepad2, X, Play, Info, Trophy, LayoutGrid, Zap } from 'lucide-react';
 import { GAMES, CATEGORIES } from './data/games';
