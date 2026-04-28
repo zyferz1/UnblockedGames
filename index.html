@@ -3,24 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-    <style>
-      #root { min-height: 100vh; background: black; color: #00FF00; display: flex; align-items: center; justify-content: center; font-family: monospace; }
-      .loading-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
-    </style>
+    <title>Cloud Arcade</title>
   </head>
-  <body>
-    <div id="root">
-      <div class="loading-pulse">INITIALIZING SYSTEM...</div>
-    </div>
-    <script type="module" src="./src/main.jsx"></script>
-    <script>
-      window.onerror = function(msg, url, lineNo, columnNo, error) {
-        document.getElementById('root').innerHTML = '<div style="color: red; padding: 20px;">SYSTEM ERROR: ' + msg + '</div>';
-        return false;
-      };
-    </script>
+  <body style="background-color: black;">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
 
