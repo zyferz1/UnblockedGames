@@ -5,9 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cloud Arcade</title>
   </head>
-  <body style="background-color: black;">
-    <div id="root"></div>
+  <body class="bg-black text-white min-h-screen overflow-x-hidden">
+    <div id="root">
+      <div style="height: 100vh; display: flex; align-items: center; justify-content: center; font-family: monospace; color: #00FF00;">
+        <div style="text-align: center;">
+          <h1 style="margin: 0; font-size: 1.5rem;">[ ARCADE_CORE_v0.9 ]</h1>
+          <p style="opacity: 0.5; margin-top: 10px; font-size: 0.8rem;">BOOTING ENGINE...</p>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Diagnostic script
+      setTimeout(() => {
+        const root = document.getElementById('root');
+        if (root && root.innerHTML.includes('BOOTING')) {
+          root.innerHTML += '<p style="color: red; position: fixed; bottom: 20px; width: 100%; text-align: center;">DEBUG: React failed to mount after 3 seconds. Check console.</p>';
+        }
+      }, 3000);
+    </script>
   </body>
 </html>
 
